@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="contents\favicon.ico">
+    <script
+      src="https://kit.fontawesome.com/4ee361ff45.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Tic Tac Toe</title>
+    <link rel="stylesheet" href="home.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="b1">Tic Tac</div>
+      <div class="b2">
+        <img src="contents/toe.png" width="220px" />
+      </div>
+
+      <div class="b3">
+        <a href="index2.html">
+        <button class="play" >Play with Friend</button></a>
+        </a>
+      </div>
+
+      <div class="b3">
+        <a  href="https://merajsiddique07.github.io/MyPortfolio/" target="_blank">
+        <button class="play follow">Follow Me</button></a>
+      </div>
+
+      <div class="heartd"> 
+        <div id="heartIcon"  class="heart-container">
+    <span class="main-heart">❤️</span>
+    <span class="small-heart">💖</span>
+    <span class="small-heart">💖</span>
+    <span class="small-heart">💖</span>
+    </div>
+      </div>
+
+    <div id="musicControlPopup" style="display: none;">
+    <div class="popup-content">
+        <span id="closePopup">
+            &times;
+        </span>
+        <h4>Created by ❤️ MERAJ</h4>
+        <p class="message">"Thanks for visiting my website! 😊✨
+                <br> ..come back anytime! 🚀🌟"</p>
+    </div>
+</div>
+    </div>
+  
+<script>
+  
+const heartIcon = document.getElementById('heartIcon');
+const musicControlPopup = document.getElementById('musicControlPopup');
+const closePopup = document.getElementById('closePopup');
+
+heartIcon.addEventListener('click', () => {
+    musicControlPopup.style.display = 'flex';
+});
+
+closePopup.addEventListener('click', () => {
+    musicControlPopup.style.display = 'none'; 
+    window.location.href = 'index.html';
+});
+
+</script>
+  </body>
+</html>

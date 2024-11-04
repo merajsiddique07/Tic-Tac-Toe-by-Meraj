@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/x-icon" href="contents\favicon.ico">
+  <link rel="stylesheet" href="page2.css">
+  <script src="https://kit.fontawesome.com/4ee361ff45.js" crossorigin="anonymous"></script>
+  <title>Pic Your Side</title>
+</head>
+<body>
+
+  <div class="home">
+        <a href="index.html">
+        <i class="fa-solid fa-arrow-left"></i>
+        </a>
+      </div>
+
+  <div class="container">
+    <div class="b1">Pic Your Side</div>
+    <div class="b2">
+      <div class="choice">
+        <div class="c4">
+          <i class="fa-solid fa-xmark"></i>
+        </div>
+        <div class="c2">
+          <input id="first" type="radio" name="choice" value="X">
+        </div>
+        <div class="c3">
+          First
+        </div>
+      </div>
+      <div class="choice">
+        <div class="c4 c6">
+          <i class="fa-regular fa-circle"></i>
+        </div>
+        <div class="c5">
+           <input id="second" type="radio" name="choice" value="O">
+        </div>
+        <div class="c3">
+          Second
+        </div>
+      </div>
+    </div>
+    <div class="b3">
+    <button class="continue" onclick="checkSelection()">Continue</button>
+     <p id="message"></p>
+    </div>
+  </div>
+
+  <audio id="backgroundMusic" src="contents/music.mp3" loop></audio>
+
+  <script>
+             function checkSelection() {
+            const options = document.getElementsByName("choice");
+            let isSelected = false;
+
+            for (const option of options) {
+                if (option.checked) {
+                    isSelected = true;
+                    break;
+                }
+            }
+
+            const messageElement = document.getElementById("message");
+            if (!isSelected) {
+                messageElement.textContent = "Please select an option..!";
+            } else {
+               getSelectedChoice();
+            }
+             var selectedChoice;
+        function getSelectedChoice() {
+            const choice = document.getElementsByName('choice');
+            selectedChoice = '';
+
+            for (const option of choice) {
+                if (option.checked) {
+                    selectedChoice = option.value;
+                    break;
+                }
+                
+            }
+             const myValue = selectedChoice;
+    window.location.href = "index3.html?myValue=" + encodeURIComponent(myValue);
+        }
+        }
+  </script>
+</body>
+</html>

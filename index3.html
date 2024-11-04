@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="contents\favicon.ico">
+    <script
+      src="https://kit.fontawesome.com/4ee361ff45.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Tic Tac Toe</title>
+    <link rel="stylesheet" href="page3.css" />
+  </head>
+
+  <body>
+
+    <div class="home">
+      <div>
+        <a href="index2.html">
+        <i class="fa-solid fa-arrow-left"></i>
+        </a>
+      </div>
+     <div>
+
+     <div id="audioToggleIcon">
+      🔊
+      </div>
+
+      <a href="index.html" style="color: black;">
+        <i class="fa-solid fa-house"></i>
+        </a>
+      </div>
+    </div>
+
+  <div class="info"></div> 
+
+    <div class="head">
+      <div class="h1">
+        0
+      </div>
+      <div class="h2"> <span><i class="fa-solid fa-xmark"></i></span>
+        Player</div>
+    </div>
+
+    <div class="gameContainer">
+      <div class="subcontainer">
+      <div class="container">
+        <div class="box bt-0 bl-0"><span class="boxText"></span></div>
+        <div class="box bt-0"><span class="boxText"></span></div>
+        <div class="box bt-0 br-0"><span class="boxText"></span></div>
+        <div class="box bl-0"><span class="boxText"></span></div>
+        <div class="box"><span class="boxText"></span></div>
+        <div class="box br-0"><span class="boxText"></span></div>
+        <div class="box bl-0 bb-0"><span class="boxText"></span></div>
+        <div class="box bb-0"><span class="boxText"></span></div>
+        <div class="box bb-0 br-0"><span class="boxText"></span></div>
+      </div>
+    </div>
+    <!-- <div class="gameInfo">
+        <div>
+          <button id="reset">Reset</button>
+        </div>
+      </div> -->
+    </div>
+    
+    <div class="footer">
+      <div class="h2 l1"> <span style="color: blueviolet;"> <i class="fa-regular fa-circle"></i></i></span>
+        Player</div>
+          <div class="h3">
+            0
+      </div>
+    </div>
+
+  <div class="overlay" id="overlay"></div>
+  
+  <div class="popup" id="popup">
+    <p id="popupMessage"></p>
+    <button id="reset">Play Again</button>
+  </div>
+
+   <div class="popup1" id="popup1">
+    <!-- <button id="reset">Play Again</button> -->
+  </div>
+  
+<audio id="backgroundMusic" src="contents/music.mp3" loop autoplay></audio>
+    <script src="script.js"></script>
+  </body>
+</html>
