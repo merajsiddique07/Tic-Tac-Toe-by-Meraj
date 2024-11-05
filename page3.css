@@ -1,0 +1,302 @@
+@import url('https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&family=Itim&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Rubik+Wet+Paint&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", serif;
+}
+.home {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 40px;
+  margin-top: 50px;
+  margin-bottom: 20px;
+  width: 100%;
+  height: 40px;
+  font-size: 40px;
+}
+#audioToggleIcon{
+  display: inline-block;
+  font-size: 40px;
+  margin-right: 30px;
+  cursor: pointer;
+}
+.info {
+  text-align: center;
+  font-size: 60px;
+  font-weight: 550;
+  color: green;
+}
+
+.head {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-top: 15px;
+  width: 100%;
+  height: 90px;
+  font-size: 40px;
+}
+
+.h1 {
+  background-color: white;
+  padding: 5px 50px;
+  font-weight: 500;
+  border-radius: 40px;
+  margin-right: 100px;
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.15);
+}
+.h2 span {
+  font-size: 60px;
+  color: orange;
+  text-shadow: 0px 2px 10px rgba(0, 0, 0, 0.15);
+}
+.gameContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.subcontainer {
+  margin-top: 60px;
+  padding: 25px;
+  box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.15);
+  border-radius: 10px;
+}
+.container {
+  display: grid;
+  grid-template-columns: repeat(3, 17vw);
+  grid-template-rows: repeat(3, 17vw);
+}
+.box {
+  border: 1px solid rgb(178, 178, 178);
+  font-size: 9vw;
+  font-weight: 500;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.box:hover {
+  background-color: rgb(242, 236, 248);
+}
+.br-0 {
+  border-right: 0;
+}
+.bl-0 {
+  border-left: 0;
+}
+.bt-0 {
+  border-top: 0;
+}
+.bb-0 {
+  border-bottom: 0;
+}
+.gameInfo {
+  margin-top: 35px;
+}
+#reset {
+  padding: 12px 25px;
+  background: black;
+  color: white;
+  font-family: "Roboto", serif;
+  border-radius: 13px;
+  border: none;
+  font-size: 25px;
+  font-weight: 550;
+  margin-top: 25px;
+}
+
+#reset:hover {
+  background-color: rgb(56, 55, 55);
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-top: 40px;
+  width: 100%;
+  height: 90px;
+  font-size: 40px;
+}
+.h3 {
+  background-color: white;
+  padding: 5px 50px;
+  font-weight: 500;
+  border-radius: 40px;
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.15);
+  margin-left: 100px;
+}
+
+.popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  width: 80%;
+  max-width: 400px;
+  padding: 50px;
+  background-color: #fff;
+  border-radius: 20px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  font-size: 28px;
+  font-weight: bold;
+  opacity: 0;
+  transition: opacity 0.3s, transform 0.5s;
+  z-index: 1000;
+}
+
+.popup.show {
+  transform: translate(-50%, -50%) scale(1);
+  opacity: 1;
+}
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  transition: opacity 0.3s;
+  visibility: hidden;
+  z-index: 500;
+}
+.overlay.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+.popup button:hover {
+  background-color: #6c6c6c;
+}
+
+@media screen and (max-width: 395px) {
+.home {
+  padding: 0 30px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  height: 60px;
+  font-size: 35px;
+}
+#audioToggleIcon{
+  font-size: 35px;
+  margin-right: 15px;
+}
+.info {
+  font-size: 45px;
+}
+.head {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+  height: 40px;
+  font-size: 30px;
+  padding: 0 35px;
+}
+.h1 {
+  background-color: white;
+  padding: 3px 40px;
+}
+.h2 span {
+  font-size: 40px;
+}
+.subcontainer {
+  margin-top: 40px;
+  padding: 25px;
+  box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.15);
+  border-radius: 10px;
+}
+.container {
+  display: grid;
+  grid-template-columns: repeat(3, 21vw);
+  grid-template-rows: repeat(3, 21vw);
+}
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-top: 40px;
+  width: 100%;
+  height: 40px;
+  padding: 0 31px;
+  font-size: 30px;
+}
+.h3 {
+  padding: 3px 40px;
+}
+.popup {
+  width: 74%;
+  max-width: 390px;
+  padding: 23px;
+  font-size: 25px;
+}
+#reset {
+  padding: 10px 20px;
+  font-size: 23px;
+}
+}
+@media screen and (min-width: 900px) {
+
+.home {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 40px;
+  margin-top: 20px;
+  width: 100%;
+  height: 30px;
+  font-size: 30px;
+}
+.head {
+  justify-content: space-evenly;
+  margin-top: -20px;
+  width: 100%;
+  height: 70px;
+  font-size: 35px;
+  padding: 0 22%;
+}
+.h1 {
+  padding: 3px 40px;
+ 
+}
+.info {
+  font-size: 45px;
+}
+  .container {
+  display: grid;
+  grid-template-columns: repeat(3, 7vw);
+  grid-template-rows: repeat(3, 7vw);
+}
+.box {
+  font-size: 6vw;
+}
+#audioToggleIcon{
+  font-size: 35px;
+}
+.subcontainer {
+  margin-top: 20px;
+}
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  margin-top: 20px;
+  width: 100%;
+  height: 70px;
+  font-size: 35px;
+ padding: 0 22%;
+}
+.h3 {
+  padding: 3px 40px;
+  margin-left: 100px;
+}
+
+} 
