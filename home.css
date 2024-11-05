@@ -1,0 +1,228 @@
+@import url("https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&family=Itim&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Rubik+Wet+Paint&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: rgb(227, 155, 11);
+  background-repeat: no-repeat;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+  width: 100%;
+  height: 100vh;
+}
+.b1 {
+  font-family: "Rubik Wet Paint", system-ui;
+  text-shadow: 2px 2px 10px rgba(1, 1, 1, 0.45);
+  word-spacing: 2px;
+  margin-top: 70px;
+  font-size: 100px;
+  color: white;
+}
+.b2 {
+  margin-top: 40px;
+}
+.play {
+  background-color: white;
+  border: none;
+  outline: none;
+  padding: 20px 90px;
+  margin-top: 50px;
+  font-size: 30px;
+  font-weight: 700;
+  border-radius: 50px;
+  box-shadow: 1px 1px 10px rgba(255, 255, 255, 0.993);
+  cursor: pointer;
+}
+.play:hover {
+  background-color: rgb(242, 242, 242);
+} 
+ .follow {
+  width: 370px;
+}
+.heartd {
+  text-align: center;
+  align-content: center;
+  background-color: white;
+  width: 85px;
+  height: 85px;
+  border-radius: 50%;
+  margin-top: 90px;
+  box-shadow: 1px 1px 10px rgba(255, 255, 255, 0.993);
+  padding-top: 5px;
+}
+.heartd:hover {
+  background-color: rgb(242, 242, 242);
+}
+
+.heart-container {
+  position: relative;
+  display: inline-block;
+  font-size: 45px;
+  cursor: pointer;
+  padding-bottom: 3px;
+}
+
+.main-heart {
+  color: rgb(255, 3, 3);
+  transition: transform 0.3s;
+}
+
+.heart-container:hover .main-heart {
+  transform: scale(1.1);
+}
+.small-heart {
+  position: absolute;
+  color: pink;
+  font-size: 15px;
+  opacity: 0;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  animation: escape 1s ease infinite;
+  display: none;
+}
+
+.heart-container:hover .small-heart {
+  display: block;
+  opacity: 1;
+}
+
+.small-heart:nth-child(2) {
+  animation-delay: 0.2s;
+  left: 30%;
+}
+
+.small-heart:nth-child(3) {
+  animation-delay: 0.4s;
+  left: 70%;
+}
+
+@keyframes escape {
+  0% {
+    transform: translate(-50%, 0);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(-50%, -60px);
+    opacity: 0;
+  }
+}
+
+#musicControlPopup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.popup-content {
+  position: relative;
+  top: 10%;
+  font-weight: bold;
+  color: rgb(255, 255, 255);
+   background: linear-gradient(160deg, rgb(224, 202, 35), rgb(234, 25, 63));
+  padding: 20px;
+  border-radius: 12px;
+  text-align: center;
+  width: 350px;
+}
+#closePopup {
+  position: absolute;
+  top: 1px;
+  right: 13px;
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+}
+#goHome {
+  color: black; 
+}
+h4{
+  font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  margin-bottom: 10px;
+  font-size: 22px;
+}
+.message{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px
+}
+ @media screen and (max-width: 395px) {
+
+.container {
+  height: 90vh;
+}
+.b1 {
+  margin-top: 40px;
+  font-size: 70px;
+}
+
+.b2 img{
+width: 220px;
+margin-bottom: -5px;
+}
+
+.b3{
+  text-align: center;
+  width: 330px;
+  height: 65px;
+  margin-top: 15px;
+  margin-bottom: 5px;
+}
+ .play {
+  padding: 15px 40px;
+  font-size: 25px;
+  font-weight: 600;
+} 
+ .follow {
+  width: 260px;
+}
+.heartd {
+  margin-top: 60px;
+  padding-top: 2px;
+}
+} 
+
+@media screen and (min-width: 900px) {
+
+.b1 {
+ 
+  margin-top: 15px;
+  font-size: 90px;
+}
+.b2 {
+  margin-top: 5px;
+}
+.b2 img{
+  width: 190px;
+}
+.b3{
+  text-align: center;
+  width: 500px;
+  height: 65px;
+  margin-bottom: 30px;
+}
+.play {
+  padding: 15px 70px;
+  margin-top: 35px;
+}
+ .follow {
+  width: 370px;
+}
+.heartd {
+  margin-top: 30px;
+  padding-top: 2px;
+}
+} 
